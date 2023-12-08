@@ -22,15 +22,12 @@ export default async function Home() {
     <>
       <Container className="">
         <div className="max-w-2xl mx-auto text-center">
-          <div className='my-16'>
-            <h1 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
-              <div className='flex flex-row gap-x-5'>
-                {/* <Image src={waveGif} height={100} width={100} alt="wave gif" /> */}
-                Hello world, I'm Josh Allan and I write beautiful code.
-              </div>
+          <div className='mt-16 mb-12'>
+            <h1 className="text-6xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-6xl">
+              I write beautiful code.
             </h1>
             <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
-              I’m Josh, a software engineer at [insert your company here], 2x entrepreneur at Moniker Branding and Roxberry Juice Co., amatuer foodie at @rvagrubs, and girl dad at home.
+              I’m Josh, a software engineer at <span className="font-medium">[insert your company here]</span>, 2x entrepreneur at Moniker Branding and Roxberry Juice Co., amatuer foodie at @rvagrubs, and girl dad at home.
             </p>
             {/* <div className="mt-6 flex gap-6">
               <SocialLink
