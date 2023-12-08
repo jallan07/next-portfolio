@@ -1,11 +1,11 @@
 import Image from "next/image"
-
-import image1 from '@/images/photos/image-1.jpg'
-import image2 from '@/images/photos/image-2.jpg'
-import image3 from '@/images/photos/image-3.jpg'
-import image4 from '@/images/photos/image-4.jpg'
-import image5 from '@/images/photos/image-5.jpg'
 import clsx from "clsx"
+
+import tacos from '@/images/photos/tacos.jpeg'
+import poke from '@/images/photos/poke.jpeg'
+import family from '@/images/photos/family.jpeg'
+import balloon from '@/images/photos/balloon.jpeg'
+import moab from '@/images/photos/moab.jpeg'
 
 export function Photos() {
     let rotations = ['rotate-2', '-rotate-2', 'rotate-2', 'rotate-2', '-rotate-2']
@@ -13,7 +13,7 @@ export function Photos() {
     return (
         <div className="mt-16 sm:mt-20">
             <div className="-my-4 flex justify-center gap-5 overflow-hidden py-4 sm:gap-8">
-                {[image1, image2, image3, image4, image5].map((image, imageIndex) => (
+                {[moab, tacos, family, poke, balloon].map((image, imageIndex) => (
                     <div
                         key={image.src}
                         className={clsx(
