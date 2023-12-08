@@ -7,9 +7,9 @@ import '@/styles/tailwind.css'
 
 export const metadata: Metadata = {
   title: {
-    template: '%s - Spencer Sharp',
+    template: '%s - Josh Allan | Full Stack Dev',
     default:
-      'Spencer Sharp - Software designer, founder, and amateur astronaut',
+      'Josh Allan | Software developer, 2x entrepreneur, and girl dad.',
   },
   description:
     'I’m Spencer, a software designer and entrepreneur based in New York City. I’m the founder and CEO of Planetaria, where we develop technologies that empower regular people to explore space on their own terms.',
