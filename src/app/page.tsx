@@ -1,5 +1,3 @@
-import Image from 'next/image'
-
 import { Container } from '@/components/Container'
 import {
   GitHubIcon,
@@ -12,13 +10,13 @@ import {
 } from '@/components/SocialIcons'
 
 
-import { getAllArticles } from '@/lib/articles'
-import waveGif from '@/images/wave.gif'
+// import { getAllArticles } from '@/lib/articles'
+// import waveGif from '@/images/wave.gif'
 import SocialLink from '@/components/SocialLink'
 import Resume from '@/components/Resume'
 
 export default async function Home() {
-  let articles = (await getAllArticles()).slice(0, 4)
+  // let articles = (await getAllArticles()).slice(0, 4)
 
   return (
     <>
