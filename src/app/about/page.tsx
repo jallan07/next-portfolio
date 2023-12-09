@@ -1,6 +1,4 @@
 import { type Metadata } from 'next'
-import Image from 'next/image'
-
 
 import { Container } from '@/components/Container'
 import {
@@ -9,16 +7,16 @@ import {
   LinkedInIcon,
   LocationIcon,
   MailIcon,
+  MusicIcon,
   PhoneIcon,
 } from '@/components/SocialIcons'
-import waveGif from '@/images/wave.gif'
 import SocialLink from '@/components/SocialLink'
 import { Photos } from '@/components/Photos'
 
 export const metadata: Metadata = {
   title: 'About',
   description:
-    'I’m Spencer Sharp. I live in New York City, where I design the future.',
+    'I’m Josh Allan. I live in Richmond VA where I dream, envision, and create the future.',
 }
 
 export default function About() {
@@ -26,22 +24,10 @@ export default function About() {
     <Container className="mt-12 sm:mt-24">
       <Photos />
       <div className="mt-24 grid grid-cols-1 gap-y-16 lg:grid-cols-2 lg:grid-rows-[auto_1fr] lg:gap-y-12">
-        {/* <div className="lg:pl-20">
-          <div className="max-w-xs px-2.5 lg:max-w-none">
-            <Image
-              src={portraitImage}
-              alt=""
-              sizes="(min-width: 1024px) 32rem, 20rem"
-              className="aspect-square rotate-3 rounded-2xl bg-zinc-100 object-cover dark:bg-zinc-800"
-            />
-          </div>
-        </div> */}
         <div className="lg:order-first lg:row-span-2">
-          <h1 className="flex text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-4xl"><Image src={waveGif} height={30} alt="wave gif" />&nbsp;&nbsp;Hello world, I'm Josh Allan.
+          <h1 className="flex text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-4xl">Developer. Foodie. Entrepreneur. Father. Marketer.
           </h1>
-          {/* <h1 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-4xl">
-            Full stack developer at <span className='italic text-md'>[insert your company here]</span>. Amatuer foodie at <a className="underline" href="https://www.instagram.com/rvagrubs/" target='_blank' rel='noreferrer'>@rvagrubs</a>. Girl dad at home.
-          </h1> */}
+          <h4 className='text-zinc-800 dark:text-zinc-100 sm:text-md text-md italic'>(list not in order of priority)</h4>
           <div className="mt-6 space-y-7 text-base text-zinc-600 dark:text-zinc-400">
             <p>
               I'm a passionate full stack web developer with 3 years of coding experience, specializing in JavaScript, API development, React, Remix.js, TypeScript, SQL, Hasura, GraphQL, and RESTful APIs.
@@ -53,7 +39,7 @@ export default function About() {
             <p>Let's connect to explore how my decade-long marketing experience and three years in development can bring value to your projects.</p>
           </div>
         </div>
-        <div className="lg:pl-20 mt-8">
+        <div className="lg:pl-20 mt-24">
           <ul role="list">
             <SocialLink href="https://github.com/jallan07" icon={GitHubIcon} className="mt-4">
               jallan07
@@ -63,6 +49,9 @@ export default function About() {
             </SocialLink>
             <SocialLink href="https://www.instagram.com/rvagrubs/" icon={InstagramIcon} className="mt-4">
               rvagrubs
+            </SocialLink>
+            <SocialLink href="https://open.spotify.com/user/12484067?si=f34a4e73c46a4f5e" icon={MusicIcon} className="mt-4">
+              josh allan
             </SocialLink>
             <SocialLink href="https://www.instagram.com/joshua.m.allan/" icon={InstagramIcon} className="mt-4">
               joshua.m.allan
@@ -82,7 +71,7 @@ export default function About() {
               615-306-5800
             </SocialLink>
             <SocialLink href="" icon={LocationIcon} className="mt-8 border-t border-zinc-100 pt-8 dark:border-zinc-700/40">
-              richmond, va
+              Richmond, VA
             </SocialLink>
           </ul>
         </div>

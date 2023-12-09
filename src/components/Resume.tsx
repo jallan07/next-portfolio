@@ -24,42 +24,42 @@ export default function Resume() {
         {
             company: 'Paymerang',
             title: 'Full Stack Software Developer',
-            logo: logoPaymerang,
+            // logo: logoPaymerang,
             start: '2021',
             end: "2023",
         },
         {
             company: 'FreshLime',
             title: 'Director of Customer Marketing',
-            logo: logoFreshlime,
+            // logo: logoFreshlime,
             start: '2018',
             end: '2020',
         },
         {
             company: 'Moniker Branding',
             title: 'Chief Brandsmith',
-            logo: logoMoniker,
+            // logo: logoMoniker,
             start: '2017',
             end: '2019',
         },
         {
             company: 'BetterBody Foods',
             title: 'Director of E-Commerce',
-            logo: logoBetterbodyFoods,
+            // logo: logoBetterbodyFoods,
             start: '2016',
             end: '2017',
         },
         {
             company: 'Revere Health',
             title: 'Digital Marketing Specialist',
-            logo: logoReverehealth,
+            // logo: logoReverehealth,
             start: '2015',
             end: '2016',
         },
         {
             company: 'OrangeSoda',
             title: 'Enterprise SEO Analyst',
-            logo: logoChart,
+            // logo: logoChart,
             start: '2010',
             end: '2015',
         },
@@ -69,7 +69,7 @@ export default function Resume() {
         <div className="rounded-2xl border border-zinc-100 p-6 dark:border-zinc-700/40">
             <h2 className="flex text-sm font-semibold text-zinc-900 dark:text-zinc-100">
                 <BriefcaseIcon className="h-6 w-6 flex-none" />
-                <span className="ml-3">Professional Experience</span>
+                <span className="ml-3">My experience at a glance</span>
             </h2>
             <ol className="mt-6 space-y-4">
                 {resume.map((role, roleIndex) => (
