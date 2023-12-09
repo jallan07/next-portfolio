@@ -1,8 +1,10 @@
 
 'use client';
 
-import { Button, Timeline } from 'flowbite-react';
+import { Timeline } from 'flowbite-react';
 import { HiArrowNarrowRight } from 'react-icons/hi';
+import { Button } from './Button'
+import { ArrowDownIcon } from './SocialIcons';
 
 export default function WorkTimeline() {
     return (
@@ -29,10 +31,20 @@ export default function WorkTimeline() {
                         framework), while also designing and implementing scalable back-end systems
                         using Hasura (GraphQL & SQL).
                     </Timeline.Body>
-                    {/* <Button href="" color="gray">
-                        Learn More
-                        <HiArrowNarrowRight className="ml-2 h-3 w-3" />
-                    </Button> */}
+                </Timeline.Content>
+            </Timeline.Item>
+            <Timeline.Item>
+                <Timeline.Content>
+                    <div className='flex gap-3'>
+                        <Button href="" color="gray">
+                            View All Work Experience
+                            <HiArrowNarrowRight className="ml-2 h-3 w-3" />
+                        </Button>
+                        <Button href="/files/Josh Allan - 2023 Resume - Software Engineer - 2 pages.pdf" target="_blank" variant='secondary' download>
+                            Download Full CV
+                            <ArrowDownIcon className="h-4 w-4 stroke-zinc-400 transition group-active:stroke-zinc-600 dark:group-hover:stroke-zinc-50 dark:group-active:stroke-zinc-50" />
+                        </Button>
+                    </div>
                 </Timeline.Content>
             </Timeline.Item>
         </Timeline>

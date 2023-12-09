@@ -39,7 +39,7 @@ export default function About() {
             <p>Let's connect to explore how my decade-long marketing experience and three years in development can bring value to your projects.</p>
           </div>
         </div>
-        <div className="lg:pl-20 mt-24">
+        <div className="lg:pl-20 mt-2">
           <ul role="list">
             <SocialLink href="https://github.com/jallan07" icon={GitHubIcon} className="mt-4">
               jallan07

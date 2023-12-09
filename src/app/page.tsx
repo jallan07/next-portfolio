@@ -1,6 +1,6 @@
 import { Container } from '@/components/Container'
 import {
-  BriefcaseIcon,
+  BriefcaseIcon, BuildingIcon,
 } from '@/components/SocialIcons'
 
 
@@ -17,7 +17,7 @@ export default async function Home() {
       <Container className="">
         <div className="max-w-4xl mx-auto text-center">
           <div className='my-28'>
-            <h1 className="text-5xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
+            <h1 className="text-5xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-2xl">
               👋 Hello world. I'm Josh Allan — a marketer turned entrepreneur turned full-stack dev.
             </h1>
             <div className='max-w-3xl text-center mx-auto mt-12'>
@@ -39,12 +39,18 @@ export default async function Home() {
               <Article key={article.slug} article={article} />
             ))}
           </div> */}
-          <WorkTimeline />
+          <div className="rounded-2xl border border-zinc-100 p-6 dark:border-zinc-700/40">
+            <h2 className="flex text-sm font-semibold text-zinc-900 dark:text-zinc-100 mb-4">
+              <BuildingIcon className="h-6 w-6 flex-none" />
+              <span className="ml-3">My experience at a glance</span>
+            </h2>
+            <WorkTimeline />
+          </div>
           <div className="space-y-10 lg:pl-16 xl:pl-24">
             <div className="rounded-2xl border border-zinc-100 p-6 dark:border-zinc-700/40">
               <h2 className="flex text-sm font-semibold text-zinc-900 dark:text-zinc-100 mb-4">
                 <BriefcaseIcon className="h-6 w-6 flex-none" />
-                <span className="ml-3">My experience at a glance</span>
+                <span className="ml-3">My skills at a glance</span>
               </h2>
               <Skills />
             </div >

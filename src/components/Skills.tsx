@@ -21,6 +21,14 @@ const skills = [
         label: 'sql',
         progress: 65
     },
+    {
+        label: "star wars",
+        progress: 90
+    },
+    {
+        label: "apex legends",
+        progress: 86
+    },
 ]
 
 export default function Skills() {
