@@ -17,7 +17,7 @@ export default async function Home() {
       <Container className="">
         <div className="max-w-4xl mx-auto text-center">
           <div className='my-28'>
-            <h1 className="text-5xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-2xl">
+            <h1 className="sm:text-4xl md:text-5xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100">
               👋 Hello world. I'm Josh Allan — a marketer turned entrepreneur turned full-stack dev.
             </h1>
             <div className='max-w-3xl text-center mx-auto mt-12'>
