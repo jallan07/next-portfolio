@@ -29,11 +29,11 @@ export default async function Recommendations() {
                 </p>
                 <div className='flex gap-3'>
                     <Button href="#dev" color="gray" className='mt-8 text-sm'>
-                        View Recommendations as a Developer
+                        View Developer Recs
                         <ArrowDownIcon className="h-4 w-4 stroke-zinc-400 transition group-active:stroke-zinc-600 dark:group-hover:stroke-zinc-50 dark:group-active:stroke-zinc-50" />
                     </Button>
                     <Button href="https://linkedin.com/in/joshuamallan/details/recommendations/" color="gray" className='mt-8 text-sm' variant='secondary'>
-                        View All Recommendations
+                        View All Recs
                         <NewSiteIcon className="h-4 w-4 stroke-zinc-400 transition group-active:stroke-zinc-600 dark:group-hover:stroke-zinc-50 dark:group-active:stroke-zinc-50" />
                     </Button>
                 </div>
