@@ -26,6 +26,7 @@ const skills = [
 export default function Skills() {
     return (<div className="text-sm font-light text-zinc-800 dark:text-zinc-100">
         {skills.map(sk => (<Progress
+            key={sk.label}
             progress={sk.progress}
             textLabel={sk.label}
             textLabelPosition="outside"
