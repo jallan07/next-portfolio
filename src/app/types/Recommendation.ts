@@ -1,6 +1,8 @@
 export interface Recommendation {
-    title: string
-    description: string
     author: string
+    company: string
     date: string
+    description: string
+    title: string
+    href: string
 }
