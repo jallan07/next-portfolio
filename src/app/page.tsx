@@ -30,8 +30,6 @@ export default async function Home() {
             </div>
           </div>
         </div>
-
-        <hr className="w-full" />
       </Container >
       <Container className="mt-8 md:mt-16" >
         <div className="mx-auto grid max-w-xl grid-cols-1 gap-y-20 lg:max-w-none lg:grid-cols-2">
