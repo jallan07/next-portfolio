@@ -53,7 +53,7 @@ export default async function Home() {
             <div className="rounded-2xl border border-zinc-100 p-6 dark:border-zinc-700/40">
               <h2 className="flex text-sm font-semibold text-zinc-900 dark:text-zinc-100 mb-4">
                 <BriefcaseIcon className="h-6 w-6 flex-none" />
-                <span className="ml-3">My skills at a glance</span>
+                <span className="ml-3">My recommendations at a glance</span>
               </h2>
               <div className="text-sm font-light text-zinc-800 dark:text-zinc-100">
                 { }
@@ -63,8 +63,8 @@ export default async function Home() {
                   showLink={false}
                   showDate={false}
                 />
-                <Button href="" color="gray">
-                  View All Work Experience
+                <Button href="/recommendations" color="gray">
+                  View All Recommendations
                   <HiArrowNarrowRight className="ml-2 h-3 w-3" />
                 </Button>
               </div>
