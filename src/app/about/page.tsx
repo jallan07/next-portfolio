@@ -53,7 +53,7 @@ export default function About() {
             <SocialLink href="https://open.spotify.com/user/12484067?si=f34a4e73c46a4f5e" icon={MusicIcon} className="mt-4">
               josh allan
             </SocialLink>
-            <SocialLink href="https://www.instagram.com/joshua.m.allan/" icon={InstagramIcon} className="mt-4">
+            <SocialLink href="https://www.instagram.com/joshua.m.allan/" icon={InstagramIcon} className="mt-4 ">
               joshua.m.allan
             </SocialLink>
             <SocialLink

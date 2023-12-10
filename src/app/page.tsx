@@ -3,14 +3,17 @@ import {
   BriefcaseIcon, BuildingIcon,
 } from '@/components/SocialIcons'
 
-
 // import { getAllArticles } from '@/lib/articles'
-import Resume from '@/components/Resume'
 import WorkTimeline from '@/components/Timeline'
-import Skills from '@/components/Skills'
+import Recommendation from '@/components/Recommendation'
+import { recommendationsJson } from './recommendations/recommendations'
+import { Button } from '@/components/Button'
+import { HiArrowNarrowRight } from 'react-icons/hi';
 
 export default async function Home() {
   // let articles = (await getAllArticles()).slice(0, 4)
+
+  const featuredRec = recommendationsJson.find(r => r.title.includes("Shawn"))
 
   return (
     <>
@@ -52,11 +55,23 @@ export default async function Home() {
                 <BriefcaseIcon className="h-6 w-6 flex-none" />
                 <span className="ml-3">My skills at a glance</span>
               </h2>
-              <Skills />
+              <div className="text-sm font-light text-zinc-800 dark:text-zinc-100">
+                { }
+                <Recommendation
+                  key={featuredRec?.title}
+                  recommendation={featuredRec || null}
+                  showLink={false}
+                  showDate={false}
+                />
+                <Button href="" color="gray">
+                  View All Work Experience
+                  <HiArrowNarrowRight className="ml-2 h-3 w-3" />
+                </Button>
+              </div>
             </div >
           </div>
           {/* <div className="space-y-10 lg:pl-16 xl:pl-24">
-
+            <Skills />
             <Newsletter />
             <Resume />
           </div> */}

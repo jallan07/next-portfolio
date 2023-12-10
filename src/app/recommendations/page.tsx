@@ -3,7 +3,6 @@ import { recommendationsJson } from './recommendations'
 import Recommendation from '@/components/Recommendation'
 import { Container } from '@/components/Container'
 import { Button } from '@/components/Button'
-import { HiArrowNarrowRight } from 'react-icons/hi';
 import { ArrowDownIcon, NewSiteIcon } from '@/components/SocialIcons'
 
 
@@ -25,7 +24,7 @@ export default async function Recommendations() {
                     But you don't have to take my word for it.
                 </h1>
                 <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
-                    Check out the kudos and recommendations shaping my software developer journey. Each collaboration adds a unique touch to my evolving portfolio story
+                    Throughout my career, I've had the pleasure of working alongside some incredible individuals. Many of which seem to have enjoyed the experience 😉. Read the recommendations I've received in my career below!
                 </p>
                 <div className='flex gap-3'>
                     <Button href="#dev" color="gray" className='mt-8 text-sm'>
