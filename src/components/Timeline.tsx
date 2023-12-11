@@ -1,39 +1,51 @@
 
 'use client';
 
-import { Timeline } from 'flowbite-react';
+import { Timeline, TimelinePoint } from 'flowbite-react';
 import { HiArrowNarrowRight } from 'react-icons/hi';
 import { Button } from './Button'
-import { ArrowDownIcon } from './SocialIcons';
+import { ArrowDownIcon, NewSiteIcon } from './SocialIcons';
+import { type Resume } from '@/app/experience/resume';
+import { formatDate } from '@/lib/formatDate';
 
-export default function WorkTimeline() {
+type Props = {
+    resumeItems: Resume[]
+    homeButtons: boolean
+}
+
+export default function WorkTimeline({ resumeItems, homeButtons = false }: Props) {
     return (
         <Timeline>
-            <Timeline.Item>
+            {resumeItems.map(item => (<Timeline.Item>
                 <Timeline.Point />
                 <Timeline.Content>
-                    <Timeline.Time>January 2018 - Present</Timeline.Time>
-                    <Timeline.Title>Freelance Web Developer</Timeline.Title>
-                    <Timeline.Time>Self-employed</Timeline.Time>
+                    <Timeline.Time>{`${item.dates.start} - ${item.dates.end}`}</Timeline.Time>
+                    <Timeline.Title>{item.title}</Timeline.Title>
+                    <Timeline.Time>{item.company}</Timeline.Time>
                     <Timeline.Body>
-                        In-depth experience building client-facing, marketing-driven websites — mostly built using CMS platforms.
+                        {item.description}
+                        {item.keyAchievements && (
+                            <div className="ml-2 my-3 text-md">
+                                <Timeline.Title className="text-md">Key Achievements:</Timeline.Title>
+                                {item.keyAchievements.map(keyAchievement => (
+                                    <ul className='ml-8 list-disc list-outside'>
+                                        <li>
+                                            {keyAchievement}
+                                        </li>
+                                    </ul>
+                                ))}
+                            </div>
+                        )}
                     </Timeline.Body>
+                    {item.href && !homeButtons && (<div className='flex gap-3'>
+                        <Button href={item.href} rel='noreferrer' target='_blank' color="gray">
+                            Learn more about {item.company}
+                            <NewSiteIcon className="ml-2 h-3 w-3" />
+                        </Button>
+                    </div>)}
                 </Timeline.Content>
-            </Timeline.Item>
-            <Timeline.Item>
-                <Timeline.Point />
-                <Timeline.Content>
-                    <Timeline.Time>April 2021 - November 2023</Timeline.Time>
-                    <Timeline.Title>Full Stack Software Engineer</Timeline.Title>
-                    <Timeline.Time>Paymerang</Timeline.Time>
-                    <Timeline.Body>
-                        Built responsive user interfaces using React (JavaScript/Typescript and Remix
-                        framework), while also designing and implementing scalable back-end systems
-                        using Hasura (GraphQL & SQL).
-                    </Timeline.Body>
-                </Timeline.Content>
-            </Timeline.Item>
-            <Timeline.Item>
+            </Timeline.Item>))}
+            {homeButtons && (<Timeline.Item>
                 <Timeline.Content>
                     <div className='flex gap-3'>
                         <Button href="" color="gray">
@@ -46,7 +58,7 @@ export default function WorkTimeline() {
                         </Button>
                     </div>
                 </Timeline.Content>
-            </Timeline.Item>
+            </Timeline.Item>)}
         </Timeline>
     );
 }

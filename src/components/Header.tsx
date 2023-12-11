@@ -133,8 +133,9 @@ function MobileNavigation(
             <nav className="mt-6">
               <ul className="-my-2 divide-y divide-zinc-100 text-base text-zinc-800 dark:divide-zinc-100/5 dark:text-zinc-300">
                 <MobileNavItem href="/">Home</MobileNavItem>
-                <MobileNavItem href="/about">About</MobileNavItem>
+                <MobileNavItem href="/experience">Experience</MobileNavItem>
                 <MobileNavItem href="/recommendations">Recommendations</MobileNavItem>
+                <MobileNavItem href="/about">About</MobileNavItem>
                 {/* <MobileNavItem href="/articles">Articles</MobileNavItem>
                 <MobileNavItem href="/projects">Projects</MobileNavItem>
                 <MobileNavItem href="/speaking">Speaking</MobileNavItem>
@@ -164,13 +165,13 @@ function NavItem({
         className={clsx(
           'relative block px-3 py-2 transition',
           isActive
-            ? 'text-teal-500 dark:text-teal-400'
-            : 'hover:text-teal-500 dark:hover:text-teal-400',
+            ? 'text-emerald-600 dark:text-emerald-600'
+            : 'hover:text-emerald-600 dark:hover:text-emerald-600',
         )}
       >
         {children}
         {isActive && (
-          <span className="absolute inset-x-1 -bottom-px h-px bg-gradient-to-r from-teal-500/0 via-teal-500/40 to-teal-500/0 dark:from-teal-400/0 dark:via-teal-400/40 dark:to-teal-400/0" />
+          <span className="absolute inset-x-1 -bottom-px h-px bg-gradient-to-r from-emerald-600/0 via-emerald-600/40 to-emerald-600/0 dark:from-emerald-600/0 dark:via-emerald-600/40 dark:to-emerald-600/0" />
         )}
       </Link>
     </li>
@@ -182,8 +183,9 @@ function DesktopNavigation(props: React.ComponentPropsWithoutRef<'nav'>) {
     <nav {...props}>
       <ul className="flex rounded-full bg-white/90 px-3 text-sm font-medium text-zinc-800 shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/5 backdrop-blur dark:bg-zinc-800/90 dark:text-zinc-200 dark:ring-white/10">
         <NavItem href="/">Home</NavItem>
-        <NavItem href="/about">About</NavItem>
+        <NavItem href="/experience">Experience</NavItem>
         <NavItem href="/recommendations">Recommendations</NavItem>
+        <NavItem href="/about">About</NavItem>
         {/* <NavItem href="/articles">Articles</NavItem>
         <NavItem href="/projects">Projects</NavItem>
         <NavItem href="/speaking">Speaking</NavItem>
@@ -193,27 +195,27 @@ function DesktopNavigation(props: React.ComponentPropsWithoutRef<'nav'>) {
   )
 }
 
-function ThemeToggle() {
-  let { resolvedTheme, setTheme } = useTheme()
-  let otherTheme = resolvedTheme === 'dark' ? 'light' : 'dark'
-  let [mounted, setMounted] = useState(false)
+// function ThemeToggle() {
+//   let { resolvedTheme, setTheme } = useTheme()
+//   let otherTheme = resolvedTheme === 'dark' ? 'light' : 'dark'
+//   let [mounted, setMounted] = useState(false)
 
-  useEffect(() => {
-    setMounted(true)
-  }, [])
+//   useEffect(() => {
+//     setMounted(true)
+//   }, [])
 
-  return (
-    <button
-      type="button"
-      aria-label={mounted ? `Switch to ${otherTheme} theme` : 'Toggle theme'}
-      className="group rounded-full bg-white/90 px-3 py-2 shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/5 backdrop-blur transition dark:bg-zinc-800/90 dark:ring-white/10 dark:hover:ring-white/20"
-      onClick={() => setTheme(otherTheme)}
-    >
-      <SunIcon className="h-6 w-6 fill-zinc-100 stroke-zinc-500 transition group-hover:fill-zinc-200 group-hover:stroke-zinc-700 dark:hidden [@media(prefers-color-scheme:dark)]:fill-teal-50 [@media(prefers-color-scheme:dark)]:stroke-teal-500 [@media(prefers-color-scheme:dark)]:group-hover:fill-teal-50 [@media(prefers-color-scheme:dark)]:group-hover:stroke-teal-600" />
-      <MoonIcon className="hidden h-6 w-6 fill-zinc-700 stroke-zinc-500 transition dark:block [@media(prefers-color-scheme:dark)]:group-hover:stroke-zinc-400 [@media_not_(prefers-color-scheme:dark)]:fill-teal-400/10 [@media_not_(prefers-color-scheme:dark)]:stroke-teal-500" />
-    </button>
-  )
-}
+//   return (
+//     <button
+//       type="button"
+//       aria-label={mounted ? `Switch to ${otherTheme} theme` : 'Toggle theme'}
+//       className="group rounded-full bg-white/90 px-3 py-2 shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/5 backdrop-blur transition dark:bg-zinc-800/90 dark:ring-white/10 dark:hover:ring-white/20"
+//       onClick={() => setTheme(otherTheme)}
+//     >
+//       <SunIcon className="h-6 w-6 fill-zinc-100 stroke-zinc-500 transition group-hover:fill-zinc-200 group-hover:stroke-zinc-700 dark:hidden [@media(prefers-color-scheme:dark)]:fill-teal-50 [@media(prefers-color-scheme:dark)]:stroke-emerald-600 [@media(prefers-color-scheme:dark)]:group-hover:fill-teal-50 [@media(prefers-color-scheme:dark)]:group-hover:stroke-teal-600" />
+//       <MoonIcon className="hidden h-6 w-6 fill-zinc-700 stroke-zinc-500 transition dark:block [@media(prefers-color-scheme:dark)]:group-hover:stroke-zinc-400 [@media_not_(prefers-color-scheme:dark)]:fill-emerald-600/10 [@media_not_(prefers-color-scheme:dark)]:stroke-emerald-600" />
+//     </button>
+//   )
+// }
 
 function clamp(number: number, a: number, b: number) {
   let min = Math.min(a, b)
@@ -445,11 +447,11 @@ export function Header() {
                 <MobileNavigation className="pointer-events-auto md:hidden" />
                 <DesktopNavigation className="pointer-events-auto hidden md:block" />
               </div>
-              <div className="flex justify-end md:flex-1">
+              {/* <div className="flex justify-end md:flex-1">
                 <div className="pointer-events-auto">
                   <ThemeToggle />
                 </div>
-              </div>
+              </div> */}
             </div>
           </Container>
         </div>

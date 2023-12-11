@@ -9,6 +9,7 @@ import Recommendation from '@/components/Recommendation'
 import { recommendationsJson } from './recommendations/recommendations'
 import { Button } from '@/components/Button'
 import { HiArrowNarrowRight } from 'react-icons/hi';
+import { resumeJson } from './experience/resume'
 
 export default async function Home() {
   // let articles = (await getAllArticles()).slice(0, 4)
@@ -18,12 +19,12 @@ export default async function Home() {
   return (
     <>
       <Container className="">
-        <div className="max-w-4xl mx-auto text-center">
-          <div className='my-28'>
+        <div className="max-w-3xl">
+          <div className='mt-28'>
             <h1 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
-              👋 Hello world. I'm Josh Allan — a marketer turned entrepreneur turned full-stack dev.
+              👋 Hello world. <br /><br />I'm Josh Allan — a marketer turned entrepreneur turned full-stack dev.
             </h1>
-            <div className='max-w-3xl text-center mx-auto mt-12'>
+            <div className='max-w-3xl mt-12'>
               <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
                 Software engineer at <span className="font-bold">[insert your company here]</span>, 2x entrepreneur at Moniker Branding and Roxberry Juice Co., amatuer foodie at @rvagrubs, and girl dad at home.
               </p>
@@ -45,7 +46,7 @@ export default async function Home() {
               <BuildingIcon className="h-6 w-6 flex-none" />
               <span className="ml-3">My experience at a glance</span>
             </h2>
-            <WorkTimeline />
+            <WorkTimeline homeButtons={true} resumeItems={[resumeJson[0], resumeJson[1]]} />
           </div>
           <div className="space-y-10 lg:pl-16 xl:pl-24">
             <div className="rounded-2xl border border-zinc-100 p-6 dark:border-zinc-700/40">
