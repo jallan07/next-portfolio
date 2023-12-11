@@ -1,9 +1,10 @@
 import { type Metadata } from 'next'
 import { recommendationsJson } from './recommendations'
-import Recommendation from '@/components/Recommendation'
+import Recommendation from '@/components/RecommendationsTimeline'
 import { Container } from '@/components/Container'
 import { Button } from '@/components/Button'
 import { ArrowDownIcon, NewSiteIcon } from '@/components/SocialIcons'
+import RecommendationsTimeline from '@/components/RecommendationsTimeline'
 
 
 export const metadata: Metadata = {
@@ -12,7 +13,7 @@ export const metadata: Metadata = {
         'Check out the kudos and recommendations shaping my software developer journey. Each collaboration adds a unique touch to my evolving portfolio story',
 }
 
-export default async function Recommendations() {
+export default function Recommendations() {
     const recommendations = recommendationsJson.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
 
     return (
@@ -39,10 +40,8 @@ export default async function Recommendations() {
             </header>
             <div className="mt-16 sm:mt-20">
                 <div className="md:border-l md:border-zinc-100 md:pl-6 md:dark:border-zinc-700/40">
-                    <div className="flex max-w-3xl flex-col space-y-16" id="dev">
-                        {recommendations.map((recommendation) => (
-                            <Recommendation key={recommendation.title} recommendation={recommendation} />
-                        ))}
+                    <div className="flex max-w-4xl flex-col space-y-16" id="dev">
+                        <RecommendationsTimeline recommendationItems={recommendations} />
                     </div>
                 </div>
             </div>

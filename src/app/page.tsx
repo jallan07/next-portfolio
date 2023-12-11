@@ -4,17 +4,15 @@ import {
 } from '@/components/SocialIcons'
 
 // import { getAllArticles } from '@/lib/articles'
-import WorkTimeline from '@/components/Timeline'
-import Recommendation from '@/components/Recommendation'
+import WorkTimeline from '@/components/WorkTimeline'
 import { recommendationsJson } from './recommendations/recommendations'
 import { Button } from '@/components/Button'
 import { HiArrowNarrowRight } from 'react-icons/hi';
 import { resumeJson } from './experience/resume'
+import RecommendationsTimeline from '@/components/RecommendationsTimeline'
 
 export default async function Home() {
-  // let articles = (await getAllArticles()).slice(0, 4)
-
-  const featuredRec = recommendationsJson.find(r => r.title.includes("Shawn"))
+  const featuredRec = recommendationsJson.find(r => r.name === 'Shawn Michael-Fakler')
 
   return (
     <>
@@ -55,13 +53,11 @@ export default async function Home() {
                 <span className="ml-3">My recommendations at a glance</span>
               </h2>
               <div className="text-sm font-light text-zinc-800 dark:text-zinc-100">
-                { }
-                <Recommendation
-                  key={featuredRec?.title}
-                  recommendation={featuredRec || null}
+                {featuredRec && (<RecommendationsTimeline
+                  recommendationItems={[featuredRec]}
                   showLink={false}
                   showDate={false}
-                />
+                />)}
                 <Button href="/recommendations" color="gray">
                   View All Recommendations
                   <HiArrowNarrowRight className="ml-2 h-3 w-3" />

@@ -1,12 +1,9 @@
 import { type Metadata } from 'next'
-import { recommendationsJson } from '../recommendations/recommendations'
-import Recommendation from '@/components/Recommendation'
 import { Container } from '@/components/Container'
 import { Button } from '@/components/Button'
 import { NewSiteIcon } from '@/components/SocialIcons'
 import { resumeJson } from './resume'
-import { Timeline } from 'flowbite-react'
-import WorkTimeline from '@/components/Timeline'
+import WorkTimeline from '@/components/WorkTimeline'
 
 
 export const metadata: Metadata = {
