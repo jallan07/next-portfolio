@@ -16,9 +16,9 @@ type Props = {
 export default function WorkTimeline({ resumeItems, homeButtons = false }: Props) {
     return (
         <Timeline>
-            {resumeItems.map(item => (<Timeline.Item>
+            {resumeItems.map((item, i) => (<Timeline.Item>
                 <Timeline.Point />
-                <Timeline.Content>
+                <Timeline.Content key={item.title + i}>
                     <Timeline.Time>{`${item.dates.start} - ${item.dates.end}`}</Timeline.Time>
                     <Timeline.Title>{item.title}</Timeline.Title>
                     <Timeline.Time>{item.company}</Timeline.Time>
@@ -27,9 +27,9 @@ export default function WorkTimeline({ resumeItems, homeButtons = false }: Props
                         {item.keyAchievements && (
                             <div className="ml-2 my-3 text-md">
                                 <Timeline.Title className="text-md">Key Achievements:</Timeline.Title>
-                                {item.keyAchievements.map(keyAchievement => (
+                                {item.keyAchievements.map((keyAchievement, i) => (
                                     <ul className='ml-8 list-disc list-outside'>
-                                        <li>
+                                        <li key={i}>
                                             {keyAchievement}
                                         </li>
                                     </ul>
