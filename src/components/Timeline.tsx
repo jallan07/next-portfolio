@@ -16,35 +16,36 @@ type Props = {
 export default function WorkTimeline({ resumeItems, homeButtons = false }: Props) {
     return (
         <Timeline>
-            {resumeItems.map((item, i) => (<Timeline.Item>
-                <Timeline.Point />
-                <Timeline.Content key={item.title + i}>
-                    <Timeline.Time>{`${item.dates.start} - ${item.dates.end}`}</Timeline.Time>
-                    <Timeline.Title>{item.title}</Timeline.Title>
-                    <Timeline.Time>{item.company}</Timeline.Time>
-                    <Timeline.Body>
-                        {item.description}
-                        {item.keyAchievements && (
-                            <div className="ml-2 my-3 text-md">
-                                <Timeline.Title className="text-md">Key Achievements:</Timeline.Title>
-                                {item.keyAchievements.map((keyAchievement, i) => (
-                                    <ul className='ml-8 list-disc list-outside'>
-                                        <li key={i}>
-                                            {keyAchievement}
-                                        </li>
-                                    </ul>
-                                ))}
-                            </div>
-                        )}
-                    </Timeline.Body>
-                    {item.href && !homeButtons && (<div className='flex gap-3'>
-                        <Button href={item.href} rel='noreferrer' target='_blank' color="gray">
-                            Learn more about {item.company}
-                            <NewSiteIcon className="ml-2 h-3 w-3" />
-                        </Button>
-                    </div>)}
-                </Timeline.Content>
-            </Timeline.Item>))}
+            {resumeItems.map((item, i) => (
+                <Timeline.Item key={item.title + i}>
+                    <Timeline.Point />
+                    <Timeline.Content >
+                        <Timeline.Time>{`${item.dates.start} - ${item.dates.end}`}</Timeline.Time>
+                        <Timeline.Title>{item.title}</Timeline.Title>
+                        <Timeline.Time>{item.company}</Timeline.Time>
+                        <Timeline.Body>
+                            {item.description}
+                            {item.keyAchievements && (
+                                <div className="ml-2 my-3 text-md">
+                                    <Timeline.Title className="text-md">Key Achievements:</Timeline.Title>
+                                    {item.keyAchievements.map((keyAchievement, i) => (
+                                        <ul className='ml-8 list-disc list-outside' key={i}>
+                                            <li>
+                                                {keyAchievement}
+                                            </li>
+                                        </ul>
+                                    ))}
+                                </div>
+                            )}
+                        </Timeline.Body>
+                        {item.href && !homeButtons && (<div className='flex gap-3'>
+                            <Button href={item.href} rel='noreferrer' target='_blank' color="gray">
+                                Learn more about {item.company}
+                                <NewSiteIcon className="ml-2 h-3 w-3" />
+                            </Button>
+                        </div>)}
+                    </Timeline.Content>
+                </Timeline.Item>))}
             {homeButtons && (<Timeline.Item>
                 <Timeline.Content>
                     <div className='flex gap-3'>
