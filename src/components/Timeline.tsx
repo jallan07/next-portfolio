@@ -49,7 +49,7 @@ export default function WorkTimeline({ resumeItems, homeButtons = false }: Props
             {homeButtons && (<Timeline.Item>
                 <Timeline.Content>
                     <div className='flex gap-3'>
-                        <Button href="" color="gray">
+                        <Button href="/experience" color="gray">
                             View All Work Experience
                             <HiArrowNarrowRight className="ml-2 h-3 w-3" />
                         </Button>
