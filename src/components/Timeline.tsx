@@ -25,7 +25,7 @@ export default function WorkTimeline({ resumeItems, homeButtons = false }: Props
                         <Timeline.Time>{item.company}</Timeline.Time>
                         <Timeline.Body>
                             {item.description}
-                            {item.keyAchievements && (
+                            {item.keyAchievements && !homeButtons && (
                                 <div className="ml-2 my-3 text-md">
                                     <Timeline.Title className="text-md">Key Achievements:</Timeline.Title>
                                     {item.keyAchievements.map((keyAchievement, i) => (

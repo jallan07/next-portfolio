@@ -25,7 +25,8 @@ export default function Recommendation({ recommendation, showDate = true, showLi
                 >
                     {formatDate(recommendation?.date)}
                 </Card.Eyebrow>)}
-                <Card.Description>{recommendation?.description}</Card.Description>
+
+                <Card.Description><span className='!text-md'>{recommendation?.description}</span></Card.Description>
                 {showLink && (<a href={recommendation?.href} target='_blank' rel="noreferrer">
                     <Card.Cta>See {recommendation?.title.split(' ')[0]}'s full profile on LinkedIn</Card.Cta>
                 </a>)}
