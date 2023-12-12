@@ -3,7 +3,6 @@ import {
   BriefcaseIcon, BuildingIcon,
 } from '@/components/SocialIcons'
 
-// import { getAllArticles } from '@/lib/articles'
 import WorkTimeline from '@/components/WorkTimeline'
 import { recommendationsJson } from './recommendations/recommendations'
 import { Button } from '@/components/Button'
@@ -12,7 +11,8 @@ import { resumeJson } from './experience/resume'
 import RecommendationsTimeline from '@/components/RecommendationsTimeline'
 
 export default async function Home() {
-  const featuredRec = recommendationsJson.find(r => r.name === 'Shawn Michael-Fakler')
+  const randomIndex = Math.floor(Math.random() * recommendationsJson.length);
+  const featuredRec = recommendationsJson[randomIndex]
 
   return (
     <>
@@ -32,13 +32,6 @@ export default async function Home() {
       </Container >
       <Container className="mt-8 md:mt-16" >
         <div className="mx-auto grid max-w-xl grid-cols-1 gap-y-20 lg:max-w-none lg:grid-cols-2">
-
-          {/* ARTICLES */}
-          {/* <div className="flex flex-col gap-16">
-            {articles.map((article) => (
-              <Article key={article.slug} article={article} />
-            ))}
-          </div> */}
           <div className="rounded-2xl border border-zinc-100 p-6 dark:border-zinc-700/40">
             <h2 className="flex text-sm font-semibold text-zinc-900 dark:text-zinc-100 mb-4">
               <BuildingIcon className="h-6 w-6 flex-none" />
@@ -65,11 +58,6 @@ export default async function Home() {
               </div>
             </div >
           </div>
-          {/* <div className="space-y-10 lg:pl-16 xl:pl-24">
-            <Skills />
-            <Newsletter />
-            <Resume />
-          </div> */}
         </div>
       </Container>
     </>
