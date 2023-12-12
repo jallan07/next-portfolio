@@ -7,11 +7,15 @@ const skills = [
     },
     {
         label: 'react',
-        progress: 77
+        progress: 86
+    },
+    {
+        label: 'html/css',
+        progress: 85
     },
     {
         label: 'typescript',
-        progress: 72
+        progress: 80
     },
     {
         label: 'graphql',
@@ -22,12 +26,12 @@ const skills = [
         progress: 65
     },
     {
-        label: "star wars",
-        progress: 90
+        label: 'aws',
+        progress: 68
     },
     {
-        label: "apex legends",
-        progress: 86
+        label: 'aws',
+        progress: 68
     },
 ]
 

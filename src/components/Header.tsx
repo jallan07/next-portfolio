@@ -165,13 +165,13 @@ function NavItem({
         className={clsx(
           'relative block px-3 py-2 transition',
           isActive
-            ? 'text-emerald-600 dark:text-emerald-600'
-            : 'hover:text-emerald-600 dark:hover:text-emerald-600',
+            ? 'text-teal-500 dark:text-teal-500'
+            : 'hover:text-teal-500 dark:hover:text-teal-500',
         )}
       >
         {children}
         {isActive && (
-          <span className="absolute inset-x-1 -bottom-px h-px bg-gradient-to-r from-emerald-600/0 via-emerald-600/40 to-emerald-600/0 dark:from-emerald-600/0 dark:via-emerald-600/40 dark:to-emerald-600/0" />
+          <span className="absolute inset-x-1 -bottom-px h-px bg-gradient-to-r from-teal-500/0 via-teal-500/40 to-teal-500/0 dark:from-teal-500/0 dark:via-teal-500/40 dark:to-teal-500/0" />
         )}
       </Link>
     </li>
@@ -211,8 +211,8 @@ function DesktopNavigation(props: React.ComponentPropsWithoutRef<'nav'>) {
 //       className="group rounded-full bg-white/90 px-3 py-2 shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/5 backdrop-blur transition dark:bg-zinc-800/90 dark:ring-white/10 dark:hover:ring-white/20"
 //       onClick={() => setTheme(otherTheme)}
 //     >
-//       <SunIcon className="h-6 w-6 fill-zinc-100 stroke-zinc-500 transition group-hover:fill-zinc-200 group-hover:stroke-zinc-700 dark:hidden [@media(prefers-color-scheme:dark)]:fill-teal-50 [@media(prefers-color-scheme:dark)]:stroke-emerald-600 [@media(prefers-color-scheme:dark)]:group-hover:fill-teal-50 [@media(prefers-color-scheme:dark)]:group-hover:stroke-teal-600" />
-//       <MoonIcon className="hidden h-6 w-6 fill-zinc-700 stroke-zinc-500 transition dark:block [@media(prefers-color-scheme:dark)]:group-hover:stroke-zinc-400 [@media_not_(prefers-color-scheme:dark)]:fill-emerald-600/10 [@media_not_(prefers-color-scheme:dark)]:stroke-emerald-600" />
+//       <SunIcon className="h-6 w-6 fill-zinc-100 stroke-zinc-500 transition group-hover:fill-zinc-200 group-hover:stroke-zinc-700 dark:hidden [@media(prefers-color-scheme:dark)]:fill-teal-50 [@media(prefers-color-scheme:dark)]:stroke-teal-500 [@media(prefers-color-scheme:dark)]:group-hover:fill-teal-50 [@media(prefers-color-scheme:dark)]:group-hover:stroke-teal-600" />
+//       <MoonIcon className="hidden h-6 w-6 fill-zinc-700 stroke-zinc-500 transition dark:block [@media(prefers-color-scheme:dark)]:group-hover:stroke-zinc-400 [@media_not_(prefers-color-scheme:dark)]:fill-teal-500/10 [@media_not_(prefers-color-scheme:dark)]:stroke-teal-500" />
 //     </button>
 //   )
 // }
