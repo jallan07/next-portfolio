@@ -21,7 +21,7 @@ export default function RecommendationsTimeline({ recommendationItems, showDate 
                         {showDate && item?.date && (<Timeline.Time className='text-zinc-600 dark:text-zinc-500'>{formatDate(item.date)}</Timeline.Time>)}
                         <Timeline.Title>{item?.name}</Timeline.Title>
                         <p className="text-sm italic font-normal text-zinc-600 dark:text-zinc-500">{item?.position}</p>
-                        <Timeline.Body className='text-zinc-600 dark:text-zinc-400'>
+                        <Timeline.Body className='text-zinc-600 dark:text-zinc-400 recommendation-body'>
                             {item?.description}
                         </Timeline.Body>
                         {showLink && (<a href={item?.href} target='_blank' rel="noreferrer">
