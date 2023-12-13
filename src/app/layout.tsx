@@ -5,14 +5,12 @@ import { Layout } from '@/components/Layout'
 
 import '@/styles/tailwind.css'
 import { SpeedInsights } from '@vercel/speed-insights/next'
-import { Analytics } from '@vercel/analytics/react';
-
+import { Analytics } from '@vercel/analytics/react'
 
 export const metadata: Metadata = {
   title: {
     template: '%s - Josh Allan | Full Stack Dev',
-    default:
-      'Josh Allan | Software developer, 2x entrepreneur, and girl dad.',
+    default: 'Josh Allan | Software developer, 2x entrepreneur, and girl dad.',
   },
   description:
     "I’m Josh, a marketer turned entrepreneur turned full-stack dev. Let's create something incredible together!",
