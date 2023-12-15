@@ -10,6 +10,7 @@ import { getRecommendations } from '@/server/getRecommendations'
 
 export default async function Home() {
   const { data } = await getRecommendations()
+  console.log('🚀 ~ file: page.tsx:13 ~ Home ~ data:', data)
 
   const randomIndex = Math.floor(Math.random() * data.length)
   const featuredRec = data[randomIndex]
