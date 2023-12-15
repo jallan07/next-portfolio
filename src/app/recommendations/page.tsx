@@ -4,21 +4,12 @@ import { Button } from '@/components/Button'
 import { ArrowDownIcon, NewSiteIcon } from '@/components/SocialIcons'
 import RecommendationsTimeline from '@/components/RecommendationsTimeline'
 import type { Recommendation as RecommendationType } from '../types/Recommendation'
+import { getRecommendations } from '@/server/getRecommendations'
 
 export const metadata: Metadata = {
   title: 'Recommendations',
   description:
     'Check out the kudos and recommendations shaping my software developer journey. Each collaboration adds a unique touch to my evolving portfolio story',
-}
-
-const getRecommendations = async () => {
-  const result = await fetch(`${process.env.URL}/api/recommendations`, {
-    method: 'GET',
-  })
-  if (result.ok) {
-    return result.json()
-  }
-  return []
 }
 
 export default async function Recommendations() {

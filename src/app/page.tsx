@@ -2,15 +2,17 @@ import { Container } from '@/components/Container'
 import { BriefcaseIcon, BuildingIcon } from '@/components/SocialIcons'
 
 import WorkTimeline from '@/components/WorkTimeline'
-import { recommendationsJson } from './recommendations/recommendations'
 import { Button } from '@/components/Button'
 import { HiArrowNarrowRight } from 'react-icons/hi'
 import { resumeJson } from './experience/resume'
 import RecommendationsTimeline from '@/components/RecommendationsTimeline'
+import { getRecommendations } from '@/server/getRecommendations'
 
 export default async function Home() {
-  const randomIndex = Math.floor(Math.random() * recommendationsJson.length)
-  const featuredRec = recommendationsJson[randomIndex]
+  const { data } = await getRecommendations()
+
+  const randomIndex = Math.floor(Math.random() * data.length)
+  const featuredRec = data[randomIndex]
 
   return (
     <>
