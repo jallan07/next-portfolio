@@ -1,10 +1,9 @@
 import { type Metadata } from 'next'
-import { recommendationsJson } from './recommendations'
-import Recommendation from '@/components/RecommendationsTimeline'
 import { Container } from '@/components/Container'
 import { Button } from '@/components/Button'
 import { ArrowDownIcon, NewSiteIcon } from '@/components/SocialIcons'
 import RecommendationsTimeline from '@/components/RecommendationsTimeline'
+import type { Recommendation as RecommendationType } from '../types/Recommendation'
 
 export const metadata: Metadata = {
   title: 'Recommendations',
@@ -12,8 +11,19 @@ export const metadata: Metadata = {
     'Check out the kudos and recommendations shaping my software developer journey. Each collaboration adds a unique touch to my evolving portfolio story',
 }
 
-export default function Recommendations() {
-  const recommendations = recommendationsJson.sort(
+const getRecommendations = async () => {
+  const result = await fetch(`${process.env.URL}/api/recommendations`, {
+    method: 'GET',
+  })
+  if (result.ok) {
+    return result.json()
+  }
+  return []
+}
+
+export default async function Recommendations() {
+  const res: { data: RecommendationType[] } = await getRecommendations()
+  const recommendations = res.data.sort(
     (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime(),
   )
 
