@@ -18,6 +18,10 @@ export default async function Recommendations() {
   const recommendations = res.data.sort(
     (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime(),
   )
+  console.log(
+    '🚀 ~ file: page.tsx:21 ~ Recommendations ~ recommendations:',
+    recommendations,
+  )
 
   return (
     <Container className="mt-16 sm:mt-32">

@@ -1,5 +1,5 @@
 import { NextResponse } from 'next/server'
-import recommendations from './recommendations.json'
+import recommendations from '@/app/data/recommendations.json'
 
 export async function GET() {
   return NextResponse.json({ recommendations })
