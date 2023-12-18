@@ -3,9 +3,7 @@ import { Container } from '@/components/Container'
 import { Button } from '@/components/Button'
 import { ArrowDownIcon, NewSiteIcon } from '@/components/SocialIcons'
 import RecommendationsTimeline from '@/components/RecommendationsTimeline'
-import type { Recommendation as RecommendationType } from '../types/Recommendation'
-import { getRecommendations } from '@/server/getRecommendations'
-import { useRouter } from 'next/navigation'
+import recommendationJson from '@/app/data/recommendations.json'
 
 export const metadata: Metadata = {
   title: 'Recommendations',
@@ -14,8 +12,7 @@ export const metadata: Metadata = {
 }
 
 export default async function Recommendations() {
-  const res: { data: RecommendationType[] } = await getRecommendations()
-  const recommendations = res.data.sort(
+  const recommendations = recommendationJson.sort(
     (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime(),
   )
 

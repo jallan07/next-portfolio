@@ -6,13 +6,11 @@ import { Button } from '@/components/Button'
 import { HiArrowNarrowRight } from 'react-icons/hi'
 import { resumeJson } from './experience/resume'
 import RecommendationsTimeline from '@/components/RecommendationsTimeline'
-import { getRecommendations } from '@/server/getRecommendations'
+import recommendationJson from '@/app/data/recommendations.json'
 
 export default async function Home() {
-  const { data } = await getRecommendations()
-
-  const randomIndex = Math.floor(Math.random() * data.length)
-  const featuredRec = data[randomIndex]
+  const randomIndex = Math.floor(Math.random() * recommendationJson.length)
+  const featuredRec = recommendationJson[randomIndex]
 
   return (
     <>
