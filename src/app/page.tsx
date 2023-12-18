@@ -9,8 +9,7 @@ import RecommendationsTimeline from '@/components/RecommendationsTimeline'
 import { getRecommendations } from '@/server/getRecommendations'
 
 export default async function Home() {
-  const { data } = await getRecommendations()
-  console.log('🚀 ~ file: page.tsx:13 ~ Home ~ data:', data)
+  const { data } = (await getRecommendations()) || []
 
   const randomIndex = Math.floor(Math.random() * data.length)
   const featuredRec = data[randomIndex]

@@ -10,18 +10,15 @@ import { useRouter } from 'next/navigation'
 export const metadata: Metadata = {
   title: 'Recommendations',
   description:
-    'Check out the kudos and recommendations shaping my software developer journey. Each collaboration adds a unique touch to my evolving portfolio story',
+    'Check out the kudos and recommendations shaping my software developer journey. Each collaboration adds a unique touch to my evolving portfolio story.',
 }
 
 export default async function Recommendations() {
   const res: { data: RecommendationType[] } = await getRecommendations()
-  const recommendations = res.data.sort(
-    (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime(),
-  )
-  console.log(
-    '🚀 ~ file: page.tsx:21 ~ Recommendations ~ recommendations:',
-    recommendations,
-  )
+  const recommendations =
+    res.data.sort(
+      (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime(),
+    ) || []
 
   return (
     <Container className="mt-16 sm:mt-32">
