@@ -1,12 +1,11 @@
 export const getRecommendations = async () => {
-  const environment =
-    process.env.NEXT_PUBLIC_ENVIRONMENT === 'local'
-      ? 'http://localhost:3000'
-      : 'https://www.joshallan.dev'
-
-  const result = await fetch(`${environment}/api/recommendations`, {
+  const result = await fetch(`${process.env.API_URL}/api/recommendations`, {
     method: 'GET',
   })
+  console.log(
+    '🚀 ~ file: getRecommendations.ts:4 ~ getRecommendations ~ `${process.env.API_URL}/api/recommendations`:',
+    `${process.env.API_URL}/api/recommendations`,
+  )
   if (result.ok) {
     return result.json()
   }

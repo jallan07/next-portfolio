@@ -5,6 +5,7 @@ import { ArrowDownIcon, NewSiteIcon } from '@/components/SocialIcons'
 import RecommendationsTimeline from '@/components/RecommendationsTimeline'
 import type { Recommendation as RecommendationType } from '../types/Recommendation'
 import { getRecommendations } from '@/server/getRecommendations'
+import { useRouter } from 'next/navigation'
 
 export const metadata: Metadata = {
   title: 'Recommendations',
