@@ -3,6 +3,11 @@ export const getRecommendations = async () => {
     method: 'GET',
   })
 
+  console.log(
+    '🚀 ~ file: getRecommendations.ts:4 ~ getRecommendations ~ result:',
+    result,
+  )
+
   if (result.ok) {
     return result.json()
   }

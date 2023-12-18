@@ -15,10 +15,9 @@ export const metadata: Metadata = {
 
 export default async function Recommendations() {
   const res: { data: RecommendationType[] } = await getRecommendations()
-  const recommendations =
-    res.data.sort(
-      (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime(),
-    ) || []
+  const recommendations = res.data.sort(
+    (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime(),
+  )
 
   return (
     <Container className="mt-16 sm:mt-32">
