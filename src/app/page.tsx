@@ -1,6 +1,5 @@
 import { Container } from '@/components/Container'
 import { BriefcaseIcon, BuildingIcon } from '@/components/SocialIcons'
-
 import WorkTimeline from '@/components/WorkTimeline'
 import { Button } from '@/components/Button'
 import { HiArrowNarrowRight } from 'react-icons/hi'

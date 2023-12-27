@@ -4,7 +4,12 @@ import { type Config } from 'tailwindcss'
 import typographyStyles from './typography'
 
 export default {
-  content: ['./src/**/*.{js,jsx,ts,tsx}', './node_modules/flowbite-react/**/*.js', './pages/**/*.{ts,tsx}', './public/**/*.html'],
+  content: [
+    './src/**/*.{js,jsx,ts,tsx}',
+    './node_modules/flowbite-react/**/*.js',
+    './pages/**/*.{ts,tsx}',
+    './public/**/*.html',
+  ],
   darkMode: 'class',
   plugins: [typographyPlugin, require('flowbite/plugin')],
   theme: {
