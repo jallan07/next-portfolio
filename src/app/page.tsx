@@ -6,7 +6,6 @@ import { HiArrowNarrowRight } from 'react-icons/hi'
 import { resumeJson } from './experience/resume'
 import RecommendationsTimeline from '@/components/RecommendationsTimeline'
 import recommendationJson from '@/app/data/recommendations.json'
-import Newsletter from '@/components/Newsletter'
 
 export default async function Home() {
   const randomIndex = Math.floor(Math.random() * recommendationJson.length)
@@ -68,9 +67,6 @@ export default async function Home() {
             </div>
           </div>
         </div>
-      </Container>
-      <Container>
-        <Newsletter />
       </Container>
     </>
   )
