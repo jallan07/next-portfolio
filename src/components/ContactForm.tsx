@@ -2,13 +2,14 @@
 import { useEffect, useState } from 'react'
 import { Button } from './Button'
 import { MailIcon } from './SocialIcons'
-import { Badge, Textarea } from 'flowbite-react'
+import { Badge, Spinner, Textarea } from 'flowbite-react'
 import { normalizePhoneInput } from '@/lib/normalizePhoneInput'
 import { HiOutlineCheck, HiOutlineX } from 'react-icons/hi'
 
 export default function ContactForm() {
   const [phoneNumber, setPhoneNumber] = useState<string | undefined>('')
   const [emailStatus, setEmailStatus] = useState<string | undefined>()
+  const [loading, setLoading] = useState<boolean>(false)
 
   const handlePhoneInputChange = (phone: string) => {
     setPhoneNumber((prevState: string | undefined) =>
@@ -18,6 +19,8 @@ export default function ContactForm() {
 
   const handleSubmit = async (event: any) => {
     event.preventDefault()
+    setLoading(true)
+
     const from = encodeURI(event.target.from.value)
     const phone = encodeURI(event.target.phone.value)
     const firstName = encodeURI(event.target.fname.value)
@@ -32,10 +35,12 @@ export default function ContactForm() {
 
     if (apiRes.status === 200) setEmailStatus('sent')
     else setEmailStatus('error')
+
+    setLoading(false)
   }
 
   useEffect(() => {
-    if (emailStatus) setTimeout(() => setEmailStatus(''), 6000)
+    if (emailStatus) setTimeout(() => setEmailStatus(''), 4000)
   }, [emailStatus])
 
   return (
@@ -110,6 +115,17 @@ export default function ContactForm() {
               Send message
             </Button>
             <div className="mx-3 my-auto">
+              {loading && (
+                <Badge className="px-4" color="warning">
+                  <Spinner
+                    className="my-1 mr-4"
+                    aria-label="Sending message spinner"
+                    size="md"
+                    color="info"
+                  />
+                  Sending message...
+                </Badge>
+              )}
               {emailStatus === 'sent' && (
                 <Badge className="px-4" color="success" icon={HiOutlineCheck}>
                   Message sent successfully
