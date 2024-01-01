@@ -4,7 +4,7 @@ import { Resend } from 'resend'
 const toAddress = process.env.EMAIL_ADDRESS!
 const resend = new Resend(process.env.RESEND_API_KEY)
 
-export async function POST(req: Request) {
+export async function POST(req: Request): Promise<Response> {
   const url = new URL(req.url)
   let params = new URLSearchParams(url.search)
 
