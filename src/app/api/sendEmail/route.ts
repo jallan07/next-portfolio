@@ -1,9 +1,7 @@
-import { EmailTemplate } from '@/components/EmailTemplate'
+import { sendEmail } from '@/lib/sendEmail'
 import { NextResponse } from 'next/server'
-import { Resend } from 'resend'
 
-const toAddress = process.env.EMAIL_ADDRESS!
-const resend = new Resend(process.env.RESEND_API_KEY)
+const internalAddress = process.env.EMAIL_ADDRESS!
 
 export async function POST(req: Request) {
   const url = new URL(req.url)
@@ -16,24 +14,46 @@ export async function POST(req: Request) {
   const subject = params.get('subject')!
   const message = params.get('message')!
 
-  try {
-    const data = await resend.emails.send({
-      from: 'contact@joshallan.dev',
-      to: [toAddress],
-      subject: `New message from ${firstName} <${from}> via the contact form on joshallan.dev`,
-      react: EmailTemplate({
-        from,
-        firstName,
-        lastName,
-        subject,
-        message,
-        phone,
-      }),
-      text: message,
-    })
+  // internal notification service (sending emails directly to my personal account)
+  const internalNotification = await sendEmail({
+    from,
+    phone,
+    firstName,
+    lastName,
+    subject,
+    message,
+    toAddress: internalAddress,
+    internalNotification: true,
+  })
 
-    return NextResponse.json({ data })
-  } catch (error) {
-    return NextResponse.json({ error })
+  if (
+    internalNotification.error ||
+    !internalNotification.data ||
+    !internalNotification.success
+  ) {
+    return NextResponse.json({ error: internalNotification.error })
   }
+
+  // external notification service (sending emails confirmations to those who submitted the message via the contact form)
+  const externalNotification = await sendEmail({
+    from,
+    firstName,
+    phone,
+    lastName,
+    subject,
+    message,
+    toAddress: from,
+    internalNotification: false,
+  })
+
+  if (
+    externalNotification.error ||
+    !externalNotification.data ||
+    !externalNotification.success
+  ) {
+    return NextResponse.json({ error: externalNotification.error })
+  }
+
+  // if nothing fails, send a successful response to the UI
+  return NextResponse.json({ error: internalNotification.data })
 }
