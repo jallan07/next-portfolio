@@ -46,95 +46,93 @@ export default function ContactForm() {
   return (
     <form
       onSubmit={(e) => handleSubmit(e)}
-      className="mt-12 rounded-2xl border border-zinc-100 p-6 dark:border-zinc-700/40"
+      className="mt-4 rounded-2xl border border-zinc-100 p-6 dark:border-zinc-700/40"
     >
-      <div className="">
-        <div className="my-4 flex max-w-full justify-center">
-          <input
-            type="email"
-            placeholder="Email address"
-            aria-label="Email address"
-            required
-            id="from"
-            name="from"
-            className="min-w-0 flex-auto appearance-none rounded-md border border-zinc-900/10 bg-white py-[calc(theme(spacing.2)-1px)] shadow-md shadow-zinc-800/5 placeholder:text-zinc-400 focus:border-teal-500 focus:outline-none focus:ring-4 focus:ring-teal-500/10 dark:border-zinc-700 dark:bg-zinc-700/[0.15] dark:text-zinc-200 dark:placeholder:text-zinc-500 dark:focus:border-teal-400 dark:focus:ring-teal-400/10 sm:text-sm"
-          />
-          <input
-            type="tel"
-            aria-label="Phone number"
-            required
-            placeholder="Phone number"
-            id="phone"
-            value={phoneNumber}
-            onChange={(e) => handlePhoneInputChange(e.target.value)}
-            name="phone"
-            className="ml-2 min-w-0 flex-auto appearance-none rounded-md border border-zinc-900/10 bg-white py-[calc(theme(spacing.2)-1px)] shadow-md shadow-zinc-800/5 placeholder:text-zinc-400 focus:border-teal-500 focus:outline-none focus:ring-4 focus:ring-teal-500/10 dark:border-zinc-700 dark:bg-zinc-700/[0.15] dark:text-zinc-200 dark:placeholder:text-zinc-500 dark:focus:border-teal-400 dark:focus:ring-teal-400/10 sm:text-sm"
-          />
-        </div>
-        <div className="my-4 flex max-w-full">
-          <input
-            type="text"
-            placeholder="First name"
-            aria-label="First name"
-            required
-            id="fname"
-            name="fname"
-            className="min-w-0 flex-auto appearance-none rounded-md border border-zinc-900/10 bg-white py-[calc(theme(spacing.2)-1px)] shadow-md shadow-zinc-800/5 placeholder:text-zinc-400 focus:border-teal-500 focus:outline-none focus:ring-4 focus:ring-teal-500/10 dark:border-zinc-700 dark:bg-zinc-700/[0.15] dark:text-zinc-200 dark:placeholder:text-zinc-500 dark:focus:border-teal-400 dark:focus:ring-teal-400/10 sm:text-sm"
-          />
-          <input
-            type="text"
-            placeholder="Last name"
-            aria-label="Last name"
-            id="lname"
-            name="lname"
-            className="ml-2 min-w-0 flex-auto appearance-none rounded-md border border-zinc-900/10 bg-white py-[calc(theme(spacing.2)-1px)] shadow-md shadow-zinc-800/5 placeholder:text-zinc-400 focus:border-teal-500 focus:outline-none focus:ring-4 focus:ring-teal-500/10 dark:border-zinc-700 dark:bg-zinc-700/[0.15] dark:text-zinc-200 dark:placeholder:text-zinc-500 dark:focus:border-teal-400 dark:focus:ring-teal-400/10 sm:text-sm"
-          />
-        </div>
-        <div className="my-4 max-w-full">
-          <Textarea
-            className="min-w-0 flex-auto appearance-none rounded-md border border-zinc-900/10 bg-white px-3 py-[calc(theme(spacing.2)-1px)] shadow-md shadow-zinc-800/5 placeholder:text-zinc-400 focus:border-teal-500 focus:outline-none focus:ring-4 focus:ring-teal-500/10 dark:border-zinc-700 dark:bg-zinc-700/[0.15] dark:text-zinc-200 dark:placeholder:text-zinc-500 dark:focus:border-teal-400 dark:focus:ring-teal-400/10 sm:text-sm"
-            id="subject"
-            placeholder="Subject"
-            required
-            rows={1}
-          />
-        </div>
-        <div className="my-4 max-w-full">
-          <Textarea
-            className="min-w-0 flex-auto appearance-none rounded-md border border-zinc-900/10 bg-white px-3 py-[calc(theme(spacing.2)-1px)] shadow-md shadow-zinc-800/5 placeholder:text-zinc-400 focus:border-teal-500 focus:outline-none focus:ring-4 focus:ring-teal-500/10 dark:border-zinc-700 dark:bg-zinc-700/[0.15] dark:text-zinc-200 dark:placeholder:text-zinc-500 dark:focus:border-teal-400 dark:focus:ring-teal-400/10 sm:text-sm"
-            id="message"
-            placeholder="Leave a message after the tone....beeeeep."
-            required
-            rows={4}
-          />
-        </div>
-        <div className="flex max-w-md flex-row">
-          <Button type="submit" className="flex-none">
-            Send message
-          </Button>
-          <div className="mx-3 my-auto">
-            {loading && (
-              <Badge className="px-4" color="warning">
-                <Spinner
-                  className="my-1 mr-4"
-                  aria-label="Sending message spinner"
-                  size="md"
-                  color="info"
-                />
-                Sending message...
-              </Badge>
-            )}
-            {emailStatus === 'sent' && (
-              <Badge className="px-4" color="success" icon={HiOutlineCheck}>
-                Message sent successfully
-              </Badge>
-            )}
-            {emailStatus === 'error' && (
-              <Badge className="px-4" color="failure" icon={HiOutlineX}>
-                Message failed to send
-              </Badge>
-            )}
-          </div>
+      <div className="my-4 flex max-w-full justify-center">
+        <input
+          type="email"
+          placeholder="Email address"
+          aria-label="Email address"
+          required
+          id="from"
+          name="from"
+          className="min-w-0 flex-auto appearance-none rounded-md border border-zinc-900/10 bg-white py-[calc(theme(spacing.2)-1px)] shadow-md shadow-zinc-800/5 placeholder:text-zinc-400 focus:border-teal-500 focus:outline-none focus:ring-4 focus:ring-teal-500/10 dark:border-zinc-700 dark:bg-zinc-700/[0.15] dark:text-zinc-200 dark:placeholder:text-zinc-500 dark:focus:border-teal-400 dark:focus:ring-teal-400/10 sm:text-sm"
+        />
+        <input
+          type="tel"
+          aria-label="Phone number"
+          required
+          placeholder="Phone number"
+          id="phone"
+          value={phoneNumber}
+          onChange={(e) => handlePhoneInputChange(e.target.value)}
+          name="phone"
+          className="ml-2 min-w-0 flex-auto appearance-none rounded-md border border-zinc-900/10 bg-white py-[calc(theme(spacing.2)-1px)] shadow-md shadow-zinc-800/5 placeholder:text-zinc-400 focus:border-teal-500 focus:outline-none focus:ring-4 focus:ring-teal-500/10 dark:border-zinc-700 dark:bg-zinc-700/[0.15] dark:text-zinc-200 dark:placeholder:text-zinc-500 dark:focus:border-teal-400 dark:focus:ring-teal-400/10 sm:text-sm"
+        />
+      </div>
+      <div className="my-4 flex max-w-full">
+        <input
+          type="text"
+          placeholder="First name"
+          aria-label="First name"
+          required
+          id="fname"
+          name="fname"
+          className="min-w-0 flex-auto appearance-none rounded-md border border-zinc-900/10 bg-white py-[calc(theme(spacing.2)-1px)] shadow-md shadow-zinc-800/5 placeholder:text-zinc-400 focus:border-teal-500 focus:outline-none focus:ring-4 focus:ring-teal-500/10 dark:border-zinc-700 dark:bg-zinc-700/[0.15] dark:text-zinc-200 dark:placeholder:text-zinc-500 dark:focus:border-teal-400 dark:focus:ring-teal-400/10 sm:text-sm"
+        />
+        <input
+          type="text"
+          placeholder="Last name"
+          aria-label="Last name"
+          id="lname"
+          name="lname"
+          className="ml-2 min-w-0 flex-auto appearance-none rounded-md border border-zinc-900/10 bg-white py-[calc(theme(spacing.2)-1px)] shadow-md shadow-zinc-800/5 placeholder:text-zinc-400 focus:border-teal-500 focus:outline-none focus:ring-4 focus:ring-teal-500/10 dark:border-zinc-700 dark:bg-zinc-700/[0.15] dark:text-zinc-200 dark:placeholder:text-zinc-500 dark:focus:border-teal-400 dark:focus:ring-teal-400/10 sm:text-sm"
+        />
+      </div>
+      <div className="my-4 max-w-full">
+        <Textarea
+          className="min-w-0 flex-auto appearance-none rounded-md border border-zinc-900/10 bg-white px-3 py-[calc(theme(spacing.2)-1px)] shadow-md shadow-zinc-800/5 placeholder:text-zinc-400 focus:border-teal-500 focus:outline-none focus:ring-4 focus:ring-teal-500/10 dark:border-zinc-700 dark:bg-zinc-700/[0.15] dark:text-zinc-200 dark:placeholder:text-zinc-500 dark:focus:border-teal-400 dark:focus:ring-teal-400/10 sm:text-sm"
+          id="subject"
+          placeholder="Subject"
+          required
+          rows={1}
+        />
+      </div>
+      <div className="my-4 max-w-full">
+        <Textarea
+          className="min-w-0 flex-auto appearance-none rounded-md border border-zinc-900/10 bg-white px-3 py-[calc(theme(spacing.2)-1px)] shadow-md shadow-zinc-800/5 placeholder:text-zinc-400 focus:border-teal-500 focus:outline-none focus:ring-4 focus:ring-teal-500/10 dark:border-zinc-700 dark:bg-zinc-700/[0.15] dark:text-zinc-200 dark:placeholder:text-zinc-500 dark:focus:border-teal-400 dark:focus:ring-teal-400/10 sm:text-sm"
+          id="message"
+          placeholder="Leave a message after the tone....beeeeep."
+          required
+          rows={4}
+        />
+      </div>
+      <div className="flex max-w-md flex-row">
+        <Button type="submit" className="flex-none">
+          Send message
+        </Button>
+        <div className="mx-3 my-auto">
+          {loading && (
+            <Badge className="px-4" color="warning">
+              <Spinner
+                className="my-1 mr-4"
+                aria-label="Sending message spinner"
+                size="md"
+                color="info"
+              />
+              Sending message...
+            </Badge>
+          )}
+          {emailStatus === 'sent' && (
+            <Badge className="px-4" color="success" icon={HiOutlineCheck}>
+              Message sent successfully
+            </Badge>
+          )}
+          {emailStatus === 'error' && (
+            <Badge className="px-4" color="failure" icon={HiOutlineX}>
+              Message failed to send
+            </Badge>
+          )}
         </div>
       </div>
     </form>
