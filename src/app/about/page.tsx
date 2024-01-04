@@ -3,6 +3,8 @@ import { Container } from '@/components/Container'
 import { Photos } from '@/components/Photos'
 import { Button } from '@/components/Button'
 import { HiArrowNarrowRight } from 'react-icons/hi'
+import Image from 'next/image'
+import wearetheallans from '@/images/photos/wearetheallans.png'
 
 export const metadata: Metadata = {
   title: 'About',
@@ -160,7 +162,9 @@ export default function About() {
           </h2>
           <div className="mt-6 space-y-7 text-base text-zinc-600 dark:text-zinc-400">
             <div>
-              <h3 className="text-lg font-medium">WE ARE THE ALLANS</h3>
+              <h3 className="text-lg font-medium text-white">
+                WE ARE THE ALLANS
+              </h3>
               <p>
                 For the first few years of our marriage, my wife and I ran a
                 wedding videography business on top of my regular full-time job.
@@ -179,14 +183,23 @@ export default function About() {
                   old YouTube channel
                 </a>
                 .
+                <Image
+                  src={wearetheallans}
+                  className="my-6 w-full rounded-2xl"
+                  alt="Youtube Channel Snapshot"
+                />
               </p>
             </div>
             <div>
-              <h3 className="text-lg">Moniker Branding</h3>
+              <h3 className="text-lg font-medium text-white">
+                Moniker Branding
+              </h3>
               <p></p>
             </div>
             <div>
-              <h3 className="text-lg">Roxberry Juice Co.</h3>
+              <h3 className="text-lg font-medium text-white">
+                Roxberry Juice Co.
+              </h3>
             </div>
           </div>
         </div>
