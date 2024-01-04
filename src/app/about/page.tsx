@@ -20,7 +20,7 @@ export default function About() {
             Legends Tryhard. Girl Dad.
           </h1>
           <p className="text-md mt-3 italic tracking-tight text-zinc-800 dark:text-zinc-100">
-            List not necessarily in that order of priority...
+            List not necessarily in order of priority...
           </p>
           <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
             With a solid foundation in digital storytelling boasting a decade of
@@ -45,10 +45,10 @@ export default function About() {
 
       {/* STORYTELLER SECTION */}
       <Container className="mt-12 sm:mt-24">
-        <hr className="border-zinc-700/40" />
-        <div className="mt-24" id="storyteller">
+        <hr className="border-zinc-700/40" id="storyteller" />
+        <div className="mt-24">
           <h2 className="flex text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-4xl">
-            📚 STORYTELLER 📚
+            📚 Storyteller 📚
           </h2>
           <div className="mt-6 space-y-7 text-base text-zinc-600 dark:text-zinc-400">
             <p>
@@ -99,8 +99,8 @@ export default function About() {
 
       {/* DEVELOPER SECTION */}
       <Container className="mt-12 sm:mt-24">
-        <hr className="border-zinc-700/40" />
-        <div className="mt-24" id="developer">
+        <hr className="border-zinc-700/40" id="developer" />
+        <div className="mt-24">
           <h2 className="flex text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-4xl">
             👨‍💻 Developer 👨‍💻
           </h2>
@@ -151,12 +151,53 @@ export default function About() {
         </div>
       </Container>
 
+      {/* ENTREPRENEUR SECTION */}
+      <Container className="mt-12 sm:mt-24">
+        <hr className="border-zinc-700/40" id="entrepreneur" />
+        <div className="mt-24">
+          <h2 className="flex text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-4xl">
+            💡 Entrepreneur 💡
+          </h2>
+          <div className="mt-6 space-y-7 text-base text-zinc-600 dark:text-zinc-400">
+            <div>
+              <h3 className="text-lg font-medium">WE ARE THE ALLANS</h3>
+              <p>
+                For the first few years of our marriage, my wife and I ran a
+                wedding videography business on top of my regular full-time job.
+                Both of us had always had an interest in photography and
+                videography, and so we decided to partner and try our hand at
+                building a business together. We put it to rest once my wife
+                became pregnant with our first daughter, as it was very time
+                consuming and required long, draining weekends of work—but many
+                of our videos can still be viewed on our{' '}
+                <a
+                  href="https://www.youtube.com/channel/UC-agQe64OJ8gKzPTj-bWPOA"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="underline"
+                >
+                  old YouTube channel
+                </a>
+                .
+              </p>
+            </div>
+            <div>
+              <h3 className="text-lg">Moniker Branding</h3>
+              <p></p>
+            </div>
+            <div>
+              <h3 className="text-lg">Roxberry Juice Co.</h3>
+            </div>
+          </div>
+        </div>
+      </Container>
+
       {/* FOODIE SECTION */}
       <Container className="mt-12 sm:mt-24">
-        <hr className="border-zinc-700/40" />
-        <div className="mt-24" id="foodie">
+        <hr className="border-zinc-700/40" id="foodie" />
+        <div className="mt-24">
           <h2 className="flex text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-4xl">
-            🍱 FOODIE 🍱
+            🍱 Foodie 🍱
           </h2>
           <div className="mt-6 space-y-7 text-base text-zinc-600 dark:text-zinc-400">
             <p>
