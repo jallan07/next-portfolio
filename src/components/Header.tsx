@@ -150,10 +150,10 @@ function DesktopNavigation(props: React.ComponentPropsWithoutRef<'nav'>) {
         <div className="mx-4 my-auto">
           <Dropdown label="About" className="bg-white" dismissOnClick inline>
             <NavItem href="/about">Overview</NavItem>
-            <NavItem href="/about#storyteller">📚 Storyteller</NavItem>
+            {/* <NavItem href="/about#storyteller">📚 Storyteller</NavItem> */}
             <NavItem href="/about#developer">👨‍💻 Developer</NavItem>
-            <NavItem href="/about#entrepreneur">💡 Entrepreneur</NavItem>
-            <NavItem href="/about#foodie">🍱 Foodie</NavItem>
+            {/* <NavItem href="/about#entrepreneur">💡 Entrepreneur</NavItem> */}
+            {/* <NavItem href="/about#foodie">🍱 Foodie</NavItem> */}
           </Dropdown>
         </div>
 
