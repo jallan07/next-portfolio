@@ -132,7 +132,9 @@ export default function About() {
               </p>
             </div>
             <div>
-              <h4 className="text-sm font-light text-white">Skills Gained</h4>
+              <h4 className="text-sm font-light text-white">
+                Primary Skills Gained
+              </h4>
               <div className="my-3 flex flex-wrap gap-2">
                 <Badge size="sm" color="gray" icon={HiCheck} className="px-4">
                   Express
@@ -179,7 +181,9 @@ export default function About() {
               </p>
             </div>
             <div>
-              <h4 className="text-sm font-light text-white">Skills Gained</h4>
+              <h4 className="text-sm font-light text-white">
+                Primary Skills Gained
+              </h4>
               <div className="my-3 flex flex-wrap gap-2">
                 <Badge size="sm" color="gray" icon={HiCheck} className="px-4">
                   Agile
@@ -222,6 +226,9 @@ export default function About() {
                 </Badge>
                 <Badge size="sm" color="gray" icon={HiCheck} className="px-4">
                   S3
+                </Badge>
+                <Badge size="sm" color="gray" icon={HiCheck} className="px-4">
+                  Serverless
                 </Badge>
                 <Badge size="sm" color="gray" icon={HiCheck} className="px-4">
                   SQL
