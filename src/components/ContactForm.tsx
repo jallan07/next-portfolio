@@ -48,7 +48,7 @@ export default function ContactForm() {
       onSubmit={(e) => handleSubmit(e)}
       className="mt-4 rounded-2xl border border-zinc-100 p-6 dark:border-zinc-700/40"
     >
-      <div className="my-4 flex max-w-full justify-center">
+      <div className="my-4 flex max-w-full">
         <input
           type="email"
           placeholder="Email address"
