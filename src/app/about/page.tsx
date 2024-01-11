@@ -4,6 +4,7 @@ import { Photos } from '@/components/Photos'
 import { Button } from '@/components/Button'
 import { HiArrowNarrowRight } from 'react-icons/hi'
 import { DeveloperOverview } from '@/app/about/DeveloperOverview'
+import { FoodieOverview } from './FoodieOverview'
 
 export const metadata: Metadata = {
   title: 'About',
@@ -102,6 +103,12 @@ export default function About() {
       <Container className="mt-12 sm:mt-24">
         <hr className="border-zinc-700/40" id="developer" />
         <DeveloperOverview />
+      </Container>
+
+      {/* FOODIE SECTION */}
+      <Container className="mt-12 sm:mt-24">
+        <hr className="border-zinc-700/40" id="foodie" />
+        <FoodieOverview />
       </Container>
 
       {/* ENTREPRENEUR SECTION */}
