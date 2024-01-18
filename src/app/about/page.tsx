@@ -43,7 +43,7 @@ export default function About() {
         </header>
       </Container>
 
-      <Photos />
+      {/* <Photos /> */}
 
       {/* STORYTELLER SECTION */}
       {/* <Container className="mt-12 sm:mt-24">

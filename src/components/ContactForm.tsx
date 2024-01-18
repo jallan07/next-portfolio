@@ -1,7 +1,7 @@
 'use client'
 import { useEffect, useState } from 'react'
 import { Button } from './Button'
-import { MailIcon } from './SocialIcons'
+import { BriefcaseIcon, MailIcon } from './SocialIcons'
 import { Badge, Spinner, Textarea } from 'flowbite-react'
 import { normalizePhoneInput } from '@/lib/normalizePhoneInput'
 import { HiOutlineCheck, HiOutlineX } from 'react-icons/hi'
@@ -46,8 +46,12 @@ export default function ContactForm() {
   return (
     <form
       onSubmit={(e) => handleSubmit(e)}
-      className="mt-4 rounded-2xl border border-zinc-100 p-6 dark:border-zinc-700/40"
+      className="rounded-2xl border border-zinc-100 p-6 dark:border-zinc-700/40"
     >
+      <h2 className="flex text-sm font-semibold text-zinc-900 dark:text-zinc-100">
+        <MailIcon className="h-6 w-6 flex-none" />
+        <span className="ml-3">Let's Connect</span>
+      </h2>
       <div className="my-4 flex max-w-full">
         <input
           type="email"
@@ -107,10 +111,10 @@ export default function ContactForm() {
           rows={4}
         />
       </div>
+      <Button type="submit" className="w-full flex-none">
+        Send Message
+      </Button>
       <div className="flex max-w-md flex-row">
-        <Button type="submit" className="flex-none">
-          Send message
-        </Button>
         <div className="mx-3 my-auto">
           {loading && (
             <Badge className="px-4" color="warning">
