@@ -45,20 +45,23 @@ export default async function Home() {
                 href="https://instagram.com"
                 aria-label="Follow on Instagram"
                 icon={InstagramIcon}
-                children={null}
-              />
+              >
+                {null}
+              </SocialLink>
               <SocialLink
                 href="https://github.com"
                 aria-label="Follow on GitHub"
                 icon={GitHubIcon}
-                children={null}
-              />
+              >
+                {null}
+              </SocialLink>
               <SocialLink
                 href="https://linkedin.com"
                 aria-label="Follow on LinkedIn"
                 icon={LinkedInIcon}
-                children={null}
-              />
+              >
+                {null}
+              </SocialLink>
             </div>
           </div>
         </div>
