@@ -102,7 +102,7 @@ export default async function Home() {
             </div>
           </div>
         </div> */}
-        <div className="mx-auto grid max-w-xl grid-cols-1 gap-y-20 space-x-14 lg:max-w-none lg:grid-cols-2">
+        <div className="mx-auto grid max-w-xl grid-cols-1 gap-y-20 lg:max-w-none lg:grid-cols-2 lg:space-x-14">
           <div className="space-y-10">
             <SimpleResume />
           </div>
