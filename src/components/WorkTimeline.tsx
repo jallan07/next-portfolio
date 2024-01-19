@@ -1,5 +1,5 @@
 'use client'
-import { Timeline, TimelinePoint } from 'flowbite-react'
+import { Timeline } from 'flowbite-react'
 import { HiArrowNarrowRight } from 'react-icons/hi'
 import { Button } from './Button'
 import { ArrowDownIcon, NewSiteIcon } from './SocialIcons'

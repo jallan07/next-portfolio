@@ -24,10 +24,10 @@ export const SimpleResume = () => {
     {
       company: 'Moniker Branding',
       title: 'Chief Brandsmith & Managing Partner',
-      start: '2011',
+      start: '2017',
       logo: 'MB',
       background: 'bg-[#9b572b]',
-      end: '2014',
+      end: '2019',
     },
     {
       company: 'BetterBody Foods',
