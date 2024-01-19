@@ -5,7 +5,6 @@ import { Button } from '@/components/Button'
 import rvagrubs from '@/images/photos/rvagrubs-screenshot.png'
 import rvagrubsInsta from '@/images/photos/rvagrubs-insta.png'
 import { NewSiteIcon } from '@/components/SocialIcons'
-import { Photos } from '@/components/Photos'
 
 export const FoodieOverview = () => {
   return (

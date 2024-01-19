@@ -10,6 +10,18 @@ export const metadata: Metadata = {
   title: 'About',
   description:
     'I’m Josh Allan. I live in Richmond VA where I dream, envision, and create the future.',
+  openGraph: {
+    title: 'Josh Allan - About Me | Dev',
+    description:
+      'I’m Josh Allan. I live in Richmond VA where I dream, envision, and create the future as a software engineer.',
+    url: 'https://www.joshallan.dev/about',
+    siteName: 'Josh Allan | Dev',
+    images: [
+      {
+        url: 'https://www.joshallan.dev/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fabout.4b6e63cc.png&w=3840&q=75',
+      },
+    ],
+  },
 }
 
 export default function About() {
