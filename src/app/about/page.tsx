@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     siteName: 'Josh Allan | Dev',
     images: [
       {
-        url: 'https://www.joshallan.dev/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fabout.4b6e63cc.png&w=3840&q=75',
+        url: 'https://www.joshallan.dev/images/about.png',
       },
     ],
   },
