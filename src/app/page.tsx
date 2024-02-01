@@ -24,8 +24,10 @@ export default async function Home() {
             <div className="mt-12 max-w-3xl">
               <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
                 Software engineer at{' '}
-                <span className="font-bold">[insert your company here]</span>,
-                2x entrepreneur at Moniker Branding and Roxberry Juice Co.,
+                <a href="https://www.cement.dev/" className="underline">
+                  Cement
+                </a>
+                , 2x entrepreneur at Moniker Branding and Roxberry Juice Co.,
                 amatuer foodie at @rvagrubs, and girl dad at home.
               </p>
             </div>

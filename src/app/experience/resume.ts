@@ -13,14 +13,14 @@ export type Resume = {
 export const resumeJson: Resume[] = [
   {
     dates: {
-      start: 'January 2018',
+      start: 'January 2024',
       end: 'Present',
     },
-    title: 'Freelance Web Developer',
-    company: 'Self-employed',
+    title: 'Full Stack Engineer',
+    company: 'Cement',
     description:
-      'In-depth experience building client-facing, marketing-driven websites — mostly built using CMS platforms (mostly Wordpress and Shopify).',
-    href: null,
+      'Seasoned full-stack engineer specializing in crafting dynamic web applications with a focus on TypeScript, React (Next/Remix), GraphQL, GROQ, and Sanity for headless CMS/UI implementations. With a keen eye for detail and a commitment to clean and efficient code, I bring a wealth of experience in leveraging modern technologies to deliver exceptional user experiences. Proficient in tailoring solutions that align with client goals, I thrive in utilizing my expertise to bridge the gap between design and functionality.',
+    href: 'https://www.cement.dev/',
   },
   {
     dates: {
