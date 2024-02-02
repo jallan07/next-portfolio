@@ -19,7 +19,7 @@ export const resumeJson: Resume[] = [
     title: 'Full Stack Engineer',
     company: 'Cement',
     description:
-      'Seasoned full-stack engineer specializing in crafting dynamic web applications with a focus on TypeScript, React (Next/Remix), GraphQL, GROQ, and Sanity for headless CMS/UI implementations. With a keen eye for detail and a commitment to clean and efficient code, I bring a wealth of experience in leveraging modern technologies to deliver exceptional user experiences. Proficient in tailoring solutions that align with client goals, I thrive in utilizing my expertise to bridge the gap between design and functionality.',
+      'Seasoned full-stack software engineer specializing in crafting dynamic web applications with a focus on TypeScript, React (Next/Remix), GraphQL, GROQ, and Sanity for headless CMS/UI implementations. With a keen eye for detail and a commitment to clean and efficient code, I bring a wealth of experience in leveraging modern technologies to deliver exceptional user experiences. Proficient in tailoring solutions that align with client goals, I thrive in utilizing my expertise to bridge the gap between design and functionality.',
     href: 'https://www.cement.dev/',
   },
   {
@@ -27,10 +27,10 @@ export const resumeJson: Resume[] = [
       start: 'April 2021',
       end: 'November 2023',
     },
-    title: 'Full Stack Software Engineer',
+    title: 'Full Stack Engineer',
     company: 'Paymerang',
     description:
-      "As a full stack software developer at Paymerang, I worked in a fast-paced environment, contributing to the development of complex web applications using a diverse set of cutting-edge technologies. My primary focus was on building responsive user interfaces using React with the Remix framework (JavaScript/Typescript), and designing/implementing scalable back-end systems using Hasura (GraphQL & SQL). In this role, I was responsible for the complete software development lifecycle, including design, development, creating unit tests, and providing deployment instructions. I collaborated closely with cross-functional teams, including product managers, designers, and other engineers, ensuring alignment with the company's business goals and user needs.",
+      "As a full-stack software engineer at Paymerang, I worked in a fast-paced environment, contributing to the development of complex web applications using a diverse set of cutting-edge technologies. My primary focus was on building responsive user interfaces using React with the Remix framework (JavaScript/Typescript), and designing/implementing scalable back-end systems using Hasura (GraphQL & SQL). In this role, I was responsible for the complete software development lifecycle, including design, development, creating unit tests, and providing deployment instructions. I collaborated closely with cross-functional teams, including product managers, designers, and other engineers, ensuring alignment with the company's business goals and user needs.",
     keyAchievements: [
       'Implemented new Onboarding process through the creation of an externally facing web application, utilizing Remix, ReactJS, TypeScript, GraphQL, reducing the overall time for onboarding from weeks to days.',
       'Key participant in the migration from SQL Server to PostgreSQL, providing code refactoring in JavaScript, TypeScript, and C# .Net, ensuring that data integrity and that all applications continued to work.',
