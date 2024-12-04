@@ -6,10 +6,10 @@ import { Button } from './Button'
 export const SimpleResume = () => {
   let resume: Array<RoleType> = [
     {
-      company: 'Cement',
-      title: 'Full Stack Engineer',
+      company: 'Freelance',
+      title: 'Software Engineer',
       start: '2024',
-      logo: 'CEM',
+      logo: 'SDE',
       background: 'bg-[#18181A]',
       end: 'Current',
     },

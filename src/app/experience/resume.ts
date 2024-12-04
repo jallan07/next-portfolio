@@ -17,10 +17,10 @@ export const resumeJson: Resume[] = [
       end: 'Present',
     },
     title: 'Full Stack Engineer',
-    company: 'Cement',
+    company: 'Freelance',
     description:
       'Seasoned full-stack software engineer specializing in crafting dynamic web applications with a focus on TypeScript, React (Next/Remix), GraphQL, GROQ, and Sanity for headless CMS/UI implementations. With a keen eye for detail and a commitment to clean and efficient code, I bring a wealth of experience in leveraging modern technologies to deliver exceptional user experiences. Proficient in tailoring solutions that align with client goals, I thrive in utilizing my expertise to bridge the gap between design and functionality.',
-    href: 'https://www.cement.dev/',
+    href: null,
   },
   {
     dates: {
