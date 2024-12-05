@@ -1,74 +1,32 @@
-import { type Metadata } from 'next'
-import { Container } from '@/components/Container'
-import { Button } from '@/components/Button'
-import { HiArrowNarrowRight } from 'react-icons/hi'
-import { DeveloperOverview } from '@/app/about/DeveloperOverview'
-import { FoodieOverview } from './FoodieOverview'
-import { EntrepreneurOverview } from './EntrepreneurOverview'
+import { Container } from "@/components/Container";
+import { Heading } from "@/components/Heading";
+import { Highlight } from "@/components/Highlight";
+import { Paragraph } from "@/components/Paragraph";
+import { Products } from "@/components/Products";
+import { Metadata } from "next";
+import Image from "next/image";
+
+import { motion } from "framer-motion";
+import About from "@/components/About";
 
 export const metadata: Metadata = {
-  title: 'About',
+  title: "About | John Doe",
   description:
-    'I’m Josh Allan. I live in Richmond VA where I dream, envision, and create the future.',
-  openGraph: {
-    title: 'Josh Allan - About Me | Dev',
-    description:
-      'I’m Josh Allan. I live in Richmond VA where I dream, envision, and create the future as a software engineer.',
-    url: 'https://www.joshallan.dev/about',
-    siteName: 'Josh Allan | Dev',
-    images: [
-      {
-        url: 'https://www.joshallan.dev/images/about.png',
-      },
-    ],
-  },
-}
+    "John Doe is a developer, writer and speaker. He is a digital nomad and travels around the world while working remotely.",
+};
 
-export default function About() {
+export default function AboutPage() {
+  const images = [
+    "https://images.unsplash.com/photo-1692544350322-ac70cfd63614?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw1fHx8ZW58MHx8fHx8&auto=format&fit=crop&w=800&q=60",
+    "https://images.unsplash.com/photo-1692374227159-2d3592f274c9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw4fHx8ZW58MHx8fHx8&auto=format&fit=crop&w=800&q=60",
+    "https://images.unsplash.com/photo-1692005561659-cdba32d1e4a1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwxOHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=60",
+    "https://images.unsplash.com/photo-1692445381633-7999ebc03730?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwzM3x8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=60",
+  ];
   return (
-    <>
-      <Container className="mt-16 sm:mt-32">
-        <header className="max-w-2xl">
-          <h1 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
-            Developer. Foodie. Storyteller. Entreprenuer. Photographer. Apex
-            Legends Tryhard. Girl Dad.
-          </h1>
-          <p className="text-md mt-3 italic tracking-tight text-zinc-800 dark:text-zinc-100">
-            List not necessarily in order of priority...
-          </p>
-          <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
-            With a solid foundation in digital storytelling boasting a decade of
-            hands-on experience coupled with a robust technical acumen honed
-            through ~3 years in software engineering, I embody the intersection
-            of two dynamic worlds.{' '}
-            <span className="font-medium">
-              Learn about my professional journey below.
-            </span>
-          </p>
-
-          <div className="flex gap-3">
-            <Button href="/contact" className="mt-8 text-sm">
-              Contact Me Today
-              <HiArrowNarrowRight className="h-4 w-4 stroke-zinc-400 transition group-active:stroke-zinc-600 dark:group-hover:stroke-zinc-50 dark:group-active:stroke-zinc-50" />
-            </Button>
-          </div>
-        </header>
-      </Container>
-
-      <Container className="mt-12 sm:mt-24">
-        <hr className="border-zinc-700/40" id="developer" />
-        <DeveloperOverview />
-      </Container>
-
-      <Container className="mt-12 sm:mt-24">
-        <hr className="border-zinc-700/40" id="foodie" />
-        <FoodieOverview />
-      </Container>
-
-      <Container className="mt-12 sm:mt-24">
-        <hr className="border-zinc-700/40" id="entrepreneur" />
-        <EntrepreneurOverview />
-      </Container>
-    </>
-  )
+    <Container>
+      <span className="text-4xl">💬</span>
+      <Heading className="font-black">About Me</Heading>
+      <About />
+    </Container>
+  );
 }
