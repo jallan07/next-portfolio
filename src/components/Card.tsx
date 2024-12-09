@@ -52,14 +52,21 @@ Card.Title = function CardTitle<T extends React.ElementType = 'h2'>({
   as,
   href,
   children,
+  className,
 }: Omit<React.ComponentPropsWithoutRef<T>, 'as' | 'href'> & {
   as?: T
   href?: string
+  className?: string
 }) {
   let Component = as ?? 'h2'
 
   return (
-    <Component className="text-base font-semibold tracking-tight text-zinc-800 dark:text-zinc-100">
+    <Component
+      className={clsx(
+        'text-base font-semibold tracking-tight text-zinc-800 dark:text-zinc-100',
+        className,
+      )}
+    >
       {href ? <Card.Link href={href}>{children}</Card.Link> : children}
     </Component>
   )
